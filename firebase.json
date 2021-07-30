@@ -1,0 +1,33 @@
+{
+  "hosting": [
+    {
+        "public": "public",
+            "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+            ],
+        "site": "staging-bc33"
+    },
+    {
+        "public": "public",
+            "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+            ],
+        "site": "webapp-3"
+    }
+  ],
+  "emulators": {
+    "hosting": {
+      "port": 5001
+    },
+    "database": {
+      "port": 3333
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
