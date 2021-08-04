@@ -1,24 +1,23 @@
 {
-  "hosting": [
-    {
-        "public": "public",
-            "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-            ],
-        "site": "staging-bc33"
-    },
-    {
-        "public": "public",
-            "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-            ],
-        "site": "webapp-3"
-    }
-  ],
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+            {
+                "source": "**",
+                "headers": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "no-store, max-age=0"
+                    }
+                ]
+            }
+        ]
+  },
   "emulators": {
     "hosting": {
       "port": 5001
